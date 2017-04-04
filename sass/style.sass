@@ -1,0 +1,518 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans)
+$main-background-color: rgba(0, 0, 0, 0.4)
+$icon-hover-color: #09bce4
+=space-reset
+	padding: 0
+	margin: 0
+=border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	-ms-border-radius: $radius
+	border-radius: $radius
+=square-size($size)
+	width: $size
+	height: $size
+*
+	+space-reset
+body
+	font-family: 'Open Sans', sans-serif
+.with-margins
+	margin-left: 10%
+	margin-right: 10%
+.row:before, .row:after
+	content: " "
+	display: table
+	margin: 0
+.row:after
+	clear: both
+header
+	height: 50px
+	background-color: $main-background-color
+.container
+	max-width: 1200px
+	margin: 0 auto
+header
+	img
+		padding: 10px 0
+	ul
+		float: right
+		+space-reset
+		list-style-type: none
+	li
+		display: inline-block
+	a
+		line-height: 50px
+		color: #fff
+		padding: 0 20px
+		text-decoration: none
+		text-transform: uppercase
+	&:hover
+		color: $icon-hover-color
+.jumbotron
+	position: relative
+	width: 100%
+	height: 800px
+	background-image: url(https://static.pexels.com/photos/170/apple-laptop-notebook-notes.jpg)
+.slogan
+	position: absolute
+	top: 350px
+	right: 0
+	background-color: $main-background-color
+	color: white
+	text-transform: uppercase
+	font-weight: 600
+	font-size: 21px
+	padding: 35px
+	line-height: 1.4em
+	width: 450px
+	cursor: pointer
+	h1
+		font-weight: 400
+		+space-reset
+.bold
+	font-weight: 800
+	+space-reset
+menuitem
+	position: absolute
+	bottom: 60px
+	left: 45%
+	li
+		float: left
+		margin-left: 50px
+		color: grey
+		font-size: 40px
+		text-align: center
+		cursor: pointer
+	&:hover
+		color: white
+.col-1x20
+	width: 20%
+.col-2x20
+	width: 40%
+.col-offset-1x20
+	margin-left: 20% 
+[class*="col-"]
+	float: left
+	min-height: 1px
+	text-align: center
+	cursor: pointer
+.benefits
+	margin-top: 40px
+	text-align: center
+h2
+	color: #313234
+	font-weight: 800
+	text-transform: uppercase
+	font-size: 18px
+.research:before
+	content: "\f002"
+.desktop:before
+	content: "\f108"
+.cogs:before
+	content: "\f085"
+.research:before, .desktop:before, .cogs:before
+	font-family: FontAwesome
+	+square-size(80px)
+	background: black
+	+border-radius(15%)
+	cursor: pointer
+	font-size: 50px
+	line-height: 80px
+	color: white
+	margin: 0 auto
+	text-align: center
+	transition: linear 0.1s
+	cursor: pointer
+	display: block
+	margin-bottom: 20px
+.research:hover:before, .desktop:hover:before, .cogs:hover:before
+	background: $icon-hover-color
+.research:hover, .desktop:hover, .cogs:hover
+	color: $icon-hover-color
+.small-text
+	padding: 0 20px 0 20px
+	font-size: 12px
+	text-align: center
+.gallery
+	width: 100%
+	margin: 40px auto
+	padding: 0
+	text-align: center
+.box, .box2
+	overflow: hidden
+.box2
+	width: 195px
+	height: 195px
+	+border-radius(50%)
+	margin-bottom: 30px
+.img-1
+	background: url(https://static.pexels.com/photos/2324/skyline-buildings-new-york-skyscrapers.jpg)
+.img-2
+	background: url(https://static.pexels.com/photos/29593/pexels-photo.jpg)
+.img-3
+	background: url(https://static.pexels.com/photos/94654/pexels-photo-94654.jpeg)
+.img-4
+	background: url(https://static.pexels.com/photos/5117/people-feet-train-travelling.jpeg)
+.img-1, .img-2, .img-3, .img-4, .img-5, .box
+	width: 100%
+	height: 240px
+.img-1, .img-2, .img-3, .img-4, .img-5, .img-6, .img-7, .img-8, .jumbotron, .phone
+	background-size: cover
+.layer
+	background: rgba(0,0,0,.75)
+	text-align: center
+	padding: 120px 0 120px 0
+	visibility: hidden
+.layer2
+	background: $main-background-color
+	text-align: center
+	padding: 100px 0 100px 0
+	visibility: hidden
+.box:hover .layer, .box2:hover .layer2
+	visibility: visible
+.img-5, .img-6, .img-7, .img-8, .box2
+	+square-size(195px)
+	+border-radius(50%)
+	margin-bottom: 30px
+.img-5
+	@extend: .box2
+	background-image: url(https://static.pexels.com/photos/119705/pexels-photo-119705.jpeg)
+.img-6
+	@extend: .box2
+	background-image: url(https://static.pexels.com/photos/51969/model-female-girl-beautiful-51969.jpeg)
+.img-7
+	@extend: .box2
+	background-image: url(https://static.pexels.com/photos/41115/pexels-photo-41115.jpeg)
+.img-8
+	@extend: .box2
+	background-image: url(https://static.pexels.com/photos/101584/pexels-photo-101584.jpeg)
+h3, .phone-title
+	padding: 20px 20px 0 0
+	font-size: 24px
+	text-transform: uppercase
+.phone-title
+	padding-left: 20px
+.caption
+	padding: 20px 300px
+	margin-bottom: 40px
+	text-align: center
+.team
+	margin-top: 40px
+	margin-left: auto
+	margin-right: auto
+	margin-bottom: 40px
+	text-align: center
+.team-member
+	text-decoration: none
+	margin: 40px auto 40px auto
+span
+	color: white
+.numbers
+	margin: 80px 0
+.number
+	+space-reset
+	font-size: 48px
+	color: black
+	font-weight: 800
+	text-align: center
+.description
+	+space-reset
+	font-size: 16px
+	color: $icon-hover-color
+	font-weight: 600
+	text-align: center
+.background
+	color: white
+	padding-top: 40px
+	padding-bottom: 0
+	background-color: $main-background-color
+	text-align: left
+.relative
+	position: relative
+.bottom
+	position: absolute
+	bottom: 0
+.phone
+	background-image: url(http://wiara.pl/files/17/02/22/743919_27Q6_mobilepng.png)
+	max-width: 281px
+	width: 281px
+	height: 256px
+.col-33
+	width: 33%
+.col-66
+	width: 66%
+article, p
+	padding: 20px 20px 10px 0
+	text-align: left
+.col-50
+	width: 50%
+.italic
+	font-style: italic
+	padding: 20px 50px 10px 20px
+	text-align: left
+footer
+	width: 100%
+	background-color: #313332
+	color: white
+	text-align: center
+	margin-top: 20px
+	margin-bottom: 20px
+.contact
+	text-align: left
+	padding: 0
+.extra-line
+	padding: 20px 0 20px 20px
+	font-size: 21px
+	text-transform: uppercase
+.extra-line:after
+	content: ""
+	display: inline-block
+	height: 2px
+	width: 20%
+	margin: 10px
+	background: white
+.contact-box
+	+space-reset
+	font-size: 14px
+	text-align: left
+h5
+	padding-left: 20px
+.top-space
+	margin-top: 20px
+.social
+	i.fa
+		width: 16px
+		height: 16px
+		cursor: pointer
+		font-size: 16px
+		line-height: 16px
+		color: white
+		transition: linear 0.1s
+		padding-left: 20px
+		background: none
+		+border-radius(0)
+		&:hover
+			color: $icon-hover-color
+			transform: scale(1.4)
+.copyright
+	text-align: center
+	padding-bottom: 20px
+	background-color: $main-background-color
+.col-1
+	width: 8.33% 
+.col-2
+	width: 16.66% 
+.col-3
+	width: 25% 
+.col-4
+	width: 33.33% 
+.col-5
+	width: 41.66% 
+.col-6
+	width: 50% 
+.col-7
+	width: 58.33% 
+.col-8
+	width: 66.66% 
+.col-9
+	width: 75% 
+.col-10
+	width: 83.33% 
+.col-11
+	width: 91.66% 
+.col-12
+	width: 100%
+.col-offset-0
+	margin-left: 0 
+.col-offset-1
+	margin-left: 8.33% 
+.col-offset-2
+	margin-left: 16.66% 
+.col-offset-3
+	margin-left: 25% 
+.col-offset-4
+	margin-left: 33.33% 
+.col-offset-5
+	margin-left: 41.66% 
+.col-offset-6
+	margin-left: 50% 
+.col-offset-7
+	margin-left: 58.33% 
+.col-offset-8
+	margin-left: 66.66% 
+.col-offset-9
+	margin-left: 75% 
+.col-offset-10
+	margin-left: 83.33% 
+.col-offset-11
+	margin-left: 91.66%
+footer
+	margin: 0
+@media (max-width: 767px)
+	.container
+		max-width: 100%
+	.hero
+		font-size: 2em
+	header
+		line-height: 50px
+		height: auto
+		text-align: center
+		img
+			margin: auto
+			padding: 5px 0 5px 0
+		ul
+			float: none
+			margin: auto
+			padding: 0
+			list-style-type: none
+			display: block
+			line-height: 50px
+			height: auto
+		li
+			display: block
+			line-height: 50px
+			height: auto
+		a
+			line-height: 50px
+			height: auto
+			color: #fff
+			padding: 0
+			text-decoration: none
+			text-transform: uppercase
+			display: block
+	menuitem
+		visibility: hidden
+	.jumbotron
+		position: static
+		display: flex
+		margin: auto
+	.slogan
+		position: static
+		width: 100%
+		margin: auto
+	h1, p
+		text-align: center
+	.caption
+		padding: 10px
+	/*h2-before hover style*/
+	.research:hover:before, .desktop:hover:before, .cogs:hover:before
+		background: black
+	/*h2 hover style*/
+	.research:hover, .desktop:hover, .cogs:hover
+		color: black
+	.with-margins
+		margin: 5px 5px 5px 5px
+	.research:before, .desktop:before, .cogs:before
+		margin-top: 20px
+	.layer, .layer2
+		background-color: transparent
+		visibility: visible
+	.team-member span
+		color: black
+		font-weight: 700
+	.bottom
+		position: static
+	.phone
+		width: 100%
+		max-width: 100%
+		background-image: url(https://static.pexels.com/photos/196656/pexels-photo-196656.jpeg)
+	.col-m-1
+		width: 8.33% 
+	.col-m-2
+		width: 16.66% 
+	.col-m-3
+		width: 25% 
+	.col-m-4
+		width: 33.33% 
+	.col-m-5
+		width: 41.66% 
+	.col-m-6
+		width: 50% 
+	.col-m-7
+		width: 58.33% 
+	.col-m-8
+		width: 66.66% 
+	.col-m-9
+		width: 75% 
+	.col-m-10
+		width: 83.33% 
+	.col-m-11
+		width: 91.66% 
+	.col-m-12, .col-s-12
+		width: 100% 
+	.col-m-offset-4
+		margin-left: 33%
+	.col-offset-4
+		margin: auto
+	p
+		padding: 10px
+@media (max-width: 1200px) and (min-width: 768px)
+	.col-m-1
+		width: 8.33% 
+	.col-m-2
+		width: 16.66% 
+	.col-m-3
+		width: 25% 
+	.col-m-4
+		width: 33.33% 
+	.col-m-5
+		width: 41.66% 
+	.col-m-6
+		width: 50% 
+	.col-m-7
+		width: 58.33% 
+	.col-m-8
+		width: 66.66% 
+	.col-m-9
+		width: 75% 
+	.col-m-10
+		width: 83.33% 
+	.col-m-11
+		width: 91.66% 
+	.col-m-12
+		width: 100% 
+	.col-m-offset-4
+		margin-left: 33%
+	.container
+		max-width: 100%
+	header
+		a
+			padding: 0 10px
+	.photo
+		margin-right: 2%
+		width: 32%
+	.jumbotron
+		position: static
+		margin: auto
+		text-aling: center
+	.flex-container
+		display: flex
+	.centered
+		margin: auto
+	.slogan, .bold
+		position: static
+		text-aling: center
+	.with-margins
+		margin: 5px 5% 5px 5%
+	.caption
+		padding: 20px
+	/*h2-before hover style*/
+	.research:hover:before, .desktop:hover:before, .cogs:hover:before
+		background: black
+	/*h2 hover style*/
+	.research:hover, .desktop:hover, .cogs:hover
+		color: black
+	.research:before, .desktop:before, .cogs:before
+		margin-top: 20px
+	.layer, .layer2
+		background-color: transparent
+		visibility: visible
+	.team-member span
+		color: black
+		font-weight: 500
+	.bottom
+		position: static
+	.phone
+		width: 100%
+		max-width: 100%
+		background-image: url(https://static.pexels.com/photos/196656/pexels-photo-196656.jpeg)
