@@ -1,0 +1,27 @@
+{
+  "name": "git",
+  "version": "1.0.0",
+  "description": "First project test",
+  "main": "index.js",
+  "scripts": {
+    "test": "C"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jad82/FirstTimeonGitHub.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Jan Drzymala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jad82/FirstTimeonGitHub/issues"
+  },
+  "homepage": "https://github.com/jad82/FirstTimeonGitHub#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-sass": "^2.0.0"
+  }
+}
